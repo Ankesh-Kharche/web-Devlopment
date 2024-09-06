@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Document</title>
+        <style>
+        .circle-to-square__container{
+            width: 450px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            &:hover {
+            .circle-to-square{
+                width: 300px;
+                border-radius: 50px;
+            }
+            .circle {
+                display: none;
+            }
+            .square {
+                display: initial;
+            }
+            }
+        }
+        .circle-to-square {
+            font-family: sans-serif;
+            width: 100%;
+            height: 100%;
+            background-color: brown;
+            border: 8px solid black;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.5 ease all;
+            square {
+                display: none;
+            }
+        }
+        </style>
+    </head>
+    <body>
+        <div class="circle_to_square_container">
+            <div class="Circle_to_square">
+                <h2 class="Circle"></h2>
+                <h2 class="square"></h2>
+            </div>
+        </div>
+    </body>
+</html>

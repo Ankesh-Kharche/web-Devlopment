@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Max Three</title>
+    </head>
+    <body>
+        <label for="n1"><b>Number 1</b></label>
+        <input type="text" id="n1"><br>
+        <lable for="n2"><b>Number 2</b></lable>
+        <input type="text" id="n2"><br>
+        <lable for="n3"><b>Number 3</b></lable>
+        <input type="text" id="n3"><br>
+        <input type="button" onclick="calc()" value="Find Max"><br>
+        <div id="ans"></div>
+
+        <script>
+            function calc(){
+                
+                a = parseInt(document.getElementById("n1").value);
+                b = parseInt(document.getElementById("n2").value);
+                c = parseInt(document.getElementById("n3").value);
+
+                d = a>b?(a>c?a:c):(b>c?b:c);
+
+                document.getElementById("ans").innerHTML = "Max = "+d;
+            }
+        </script>
+    </body>
+</html>

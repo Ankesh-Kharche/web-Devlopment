@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*let a = [5, 7, 12, 13, 6, 11, 20]; //demo-1
+
+        let b = []
+
+        for(let v of a){
+            b.push(v*v);
+    
+        }
+
+        document.write(a);
+        document.write('<br>');
+        document.write(b);*/
+
+
+        let a = ["ram", "gopal", "sham", "bunty", "jack", "radha"];    //demo-2
+
+        let b = a.map((x)=>x.length);
+
+        document.write(a);
+        document.write('<br>');
+        document.write(b);
+
+        let c = a.filter((x)=>x.length==3);
+
+        document.write('<br>');
+        document.write(c);
+
+        let nos = [5, 2, 7, 1, 8];
+        let ans = nos.reduce((x,y)=>x+y*y, 100)
+        document.write('<br>');
+        document.write(ans);
+
+        let s = a.reduce((x,y)=>x+y, "*");
+        document.write('<br>');
+        document.write(s);
+    </script>
+</body>
+</html>

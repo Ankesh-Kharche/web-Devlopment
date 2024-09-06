@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function show1()
+        {
+            var r=confirm("Press a button");
+            if (r==true){
+                alert("you cliked ok")
+            }else{{
+                alert("you cliked cancle")
+            }}
+        }
+        function show2(){
+            let name = prompt("Enter your Name", "Ankesh");
+            if(name!=null && name!="");
+            {
+                document.write("Hello" + "Ankesh")
+            }
+        }
+    </script>
+    <input type="button" value="Alert box" onclick="show()">
+    <input type="button" value="Confirm box" onclick="show1()">
+    <input type="button" value="prompt box" onclick="show2()">
+</body>
+</html>

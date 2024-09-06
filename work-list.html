@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work-list</title>
+    <style>
+        div{
+            padding: 15px;
+            display: block;
+        }
+        table{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div>
+            <lable for="Work"><b>Work</b></lable>
+            <input type="text" id="work">
+        </div>
+        <div>
+            <lable for="Date"><b>Date</b></lable>
+            <input type="Date" id="Date">
+        </div>
+    </div>
+    <input type="button" onclick="add()" value="add">
+     <input type="button" onclick="update()" value="update">
+     <table>
+        <thead>
+            <tr>
+                <th scope="col">Work</th>
+                <th scope="col">Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+        </tbody>
+    </table>
+    <h1 id="demo"></h1>
+    <script>
+       
+       function display(){
+          let s = "<table><tr><th>Work</th><th>Date</th></tr>";
+            for(let i=0; i<e.length; i++){
+                let rec = e[i];
+                s += `<tr><td>${rec.work}</td><td>${rec.date}</td></tr>`;    
+            }
+            s +="</table>";
+            document.getElementById("ans").innerHTML = s;
+            display();
+       }
+
+       function add(){
+        let work = document.getElementById("work").value;
+        let date = document.getElementById("date").innerHTML;
+
+        let rec = {"empwork": work, "empdate": date};
+        e.push(rec);
+
+        document.getElementById("work").value = "";
+        document.getElementById("date").value = "";
+
+        display();
+       }
+    </script>
+</body>
+</html>

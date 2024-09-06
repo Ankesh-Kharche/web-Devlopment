@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="p" placeholder="Principal Amount" min="1000">
+    <input type="number" id="n" placeholder="No.of.years" min="1">
+    <input type="number" id="r" placeholder="Rate of Interest (%)" min="5">
+
+    <input type="Button" value="calculator" onclick="calc()">
+    <input type="Button" value="clear" onclick="clear1()">
+    <div id="ans"></div>
+
+    <script>
+        function calc()
+        {
+            let p = parseInt(document.getElementById("p").value);
+            let n = parseInt(document.getElementById("n").value);
+            let r = parseInt(document.getElementById("r").value);
+
+            let s = "<table border=1><tr><th>Year</th><th>Amount</th></tr>";
+            
+            for(let i=1; i<=n; i++){
+                let v = p*(1+r/100);
+                s += "<tr><td>"+i+"</td><td>"+v+"</td></tr>";
+                p = v;
+            }
+
+            s+="</table>";
+            document.getElementById("ans").innerHTML = s;
+        }
+        function clear1()
+        {
+            document.getElementById("").innerHTML = "";
+        }
+    </script>
+</body>
+</html>

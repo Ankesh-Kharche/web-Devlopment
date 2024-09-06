@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        <input type="number" id="n" min="1" placeholder="Enter a number">
+        <input type="button" value="sum" onclick="sum(n.value)">
+        
+    <script>
+        function sum(n)
+        {
+            let s = 0;
+            while(n>0)
+            {
+                let d = n%10;
+                if(d%2==1)
+                  s += Math.pow(d, 3);
+                n = Math.floor(n/10)
+            }
+            alert("sum of cube of odd digits is" +s)
+        }
+    </script>
+</body>
+</html>

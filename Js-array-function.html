@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*let a = [10, 50, 10, 60, 80, 5, 10, 100, 90, 20, 10, 80];     //demo-1
+
+        document.write(a.indexOf(80));
+
+        let names = {"Ram", "Sham",}*/
+
+        let s = "Hello World";    //demo-2
+        let a = Array.from(s);
+        console.log(typeof(s));
+        console.log(typeof(a));
+        console.log(s);
+        console.log(a);
+        let b = a.keys();
+        console.log(b);
+
+        for(let x of b){
+            console.log(x);
+        }
+
+        let c = a.entries();
+        for(let [k,v] of c){
+            console.log(k+":"+v);
+        }
+    </script>
+
+</body>
+</html>

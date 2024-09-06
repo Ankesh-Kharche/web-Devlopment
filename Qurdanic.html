@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+    <label for="a">Enter coefficient a:</label>
+    <input type="number" id="a" min="1">
+    </p>
+    <p>
+        <label for="b">Enter coefficient b:</label>
+        <input type="number" id="b" min="1">
+    </p>
+    <p>
+    <label for="c">Enter coefficient c:</label>
+    <input type="number" id="c" min="1">
+    </p>
+    <p>
+        <input type="button" value="Calculate" onclick="calc()">
+    </p>
+    <p id="ans">
+    </p>
+
+    <script>
+        function calc(){
+            let a = document.getElementById("a").value;
+            let b = document.getElementById("b").value;
+            let c = document.getElementById("c").value;
+
+            let d = b*b - 4*a*c;
+
+            x1 = x2 = -b/(2*a)
+
+            if(d==0){
+                let x = -b/(2*a);
+                
+            }
+            else if(d>0){
+                x1 = (-b+Math.sqrt(d))/(2*a);
+                x2 = (-b-Math.sqrt(d))/(2*a);
+                
+            }
+            else{
+                let real = -b/(2*a);
+                let img = math.sqrt(-d)/(2*a);
+                let x1 = real + "+" + img + "j";
+                let x2 = real + "-" + img + "j";
+            }
+            s = "x1="+x1+
+
+}       
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            padding: 10px;
+            font-size: 20px;
+
+        }
+    </style>
+</head>
+<body>
+    <input type="number" id="d" placeholder="Day">
+    <input type="number" id="m" placeholder="month">
+    <input type="number" id="y" placeholder="year">
+    <input type="button" onclick="check(d.value, m.value, y.value)" value="check">
+
+    <script>
+        function check(d, m, y)
+        {
+            d = parseInt(d)
+            m = parseInt(m)
+            y = parseInt(y)
+
+            switch(m)
+            {
+                case 1:
+                case 2:
+                case 3:
+                case 4:
+                case 5:
+                case 6:
+                case 7:
+                case 8:
+                case 9:
+                case 10:
+                    if(d>=1 && d<=31)
+                     alert("Valid")
+                     else
+                     alert("Invalid")
+                     break;
+                case 2:
+                    if(y%4==0 && y%100!=0 || y%400==0)
+                    if("")
+                     alert("Valid")
+                     else
+                     alert("Invalid")
+                     break;
+                case 4:
+                case 5:
+                case 6: 
+            }
+        }
+    </script>
+</body>
+</html>

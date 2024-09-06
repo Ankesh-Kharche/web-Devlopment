@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee</title> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        th{
+            background-color: aquamarine;
+        }
+        td,th{
+            border: 1px solid black;
+
+        }
+        label{
+            display: block;
+            padding: 10px;
+        }
+        input{
+            padding: 5px;
+        }
+        input[type=button]{
+            padding: 5px;
+            background-color: grey;
+            color: black;
+            border-radius: 5px;
+            border: none;
+            font-weight: bold;
+            font-size: 15px;
+        }
+        div{
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div>
+            <label for="id"><b>ID</b></label>
+            <input type="text" id="id">
+        </div>
+        <div>
+            <label for="Name"><b>Name</b></label>
+            <input type="text" id="Name">
+        </div>
+        <div>
+            <label for="Sal"><b>Sal</b></label>
+            <input type="text" id="Sal">
+        </div>
+        <div>
+           
+        </div>
+        <input type="button" onclick="add()" value="Add">
+        <input type="button" onclick="update()" value="update">
+    </div>
+    <div id="ans">
+    </div>
+    <script>
+        const e = [{"empid": 1945,"empname": "Ankesh kharche", "empsal": 4500},
+                   {"empid": 1145,"empname": "prasad patil", "empsal": 7500},
+                   {"empid": 3045,"empname": "Sumit Patil", "empsal": 11500},
+                   {"empid": 7045,"empname": "vicky Jadhao", "empsal": 6500}];
+        let = j;
+        function display(){
+            let s = "<table><tr><th>ID</th><th>Name</th><th>Salary</th><th></th><th></th></tr>";
+            for(let i=0; i<e.length; i++){
+                let rec = e[i];
+                s += `<tr><td>${rec.empid}</td><td>${rec.empname}</td><td>${rec.empsal}</td><td><a title='Delete' onclick='del(${i})'><i class="fa fa-trash-o"></i></td><td><a title='Edit' onclick='edit(${i})'><i class="fa fa-edit"></i></a></td></tr>`;    
+            }
+            s += "</table>";
+            document.getElementById("ans").innerHTML = s;
+        }
+        display();
+        
+        function add(){
+            let id = document.getElementById("id").value;
+            let Name = document.getElementById("Name").value;
+            let Sal = document.getElementById("Sal").value;
+
+            let rec = {"empid": id,"empname": Name, "empsal": Sal};
+            e.push(rec);
+
+            document.getElementById("id").value = "";
+            document.getElementById("Name").value = "";
+            document.getElementById("Sal").value = "";
+
+            display();
+        }
+
+        function del(i){
+            var reply = confirm("Delete?");
+            if(reply==true){
+                e.splice(i,1)
+                display();
+            }
+        }
+
+        function edit(i){
+            document.getElementById("id").value = e[i].empid;
+            document.getElementById("Name").value = e[i].empname;
+            document.getElementById("Sal").value = e[i].empsal;
+            j = i;
+        }
+
+        function update(){
+            e[j].empid = document.getElementById("id").value;
+            e[j].empname = document.getElementById("Name").value;
+            e[j].empsal = document.getElementById("Sal").value;
+            
+            display();
+        }
+    </script>
+</body>
+</html>
